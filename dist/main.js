@@ -3,6 +3,7 @@
 // ========================================================================
 // Données de Départ
 // ========================================================================
+//youpi
 const data = {
     books: [
         {
@@ -60,17 +61,9 @@ console.log(appName, isOnline, maxItems);
 console.log("Exercice 2 : ");
 console.log("-");
 // ========================================================================
-// Objectif : Décrire le type de chaque catégorie de produit.
-//
-// 1. Créez une interface "Book" avec les propriétés correspondantes.
-// 2. Créez une interface "Movie" avec les propriétés correspondantes.
-// 3. Créez une interface "Album" avec les propriétés correspondantes.
-// ========================================================================
 // Exercice 3 : Interface de l’Objet Global
 console.log("Exercice 3 : ");
 console.log("-");
-// ========================================================================
-// Objectif : Utilisez les interfaces précédentes pour typer l’objet "data".
 //
 // 1. Créez une interface "MediaData" avec trois propriétés :
 //    - books : tableau de Book
@@ -87,6 +80,32 @@ console.log("-");
 //
 // 1. Créez une fonction "displayItemDetails" qui accepte un objet de type
 //    Book, Movie ou Album (vous pouvez utiliser un type union).
+const displayItemDetails = (pOeuvre) => {
+    let oeuvreType = "";
+    let oeuvreCreator = "";
+    if ('author' in pOeuvre) {
+        oeuvreType = "livre écrit";
+        oeuvreCreator = "l'auteur " + pOeuvre.author;
+    }
+    else if ('director' in pOeuvre) {
+        oeuvreType = "film réalisé";
+        oeuvreCreator = "l'auteur " + pOeuvre.director;
+    }
+    else if ('artist' in pOeuvre) {
+        oeuvreType = "album composé";
+        oeuvreCreator = "l'artiste " + pOeuvre.artist;
+    }
+    else {
+        alert('wtf error de propriété d objet');
+        console.error('wtf error de propriété d objet');
+    }
+    return "l'oeuvre: " + pOeuvre.title + " est un " + oeuvreType + " en " + pOeuvre.year + " par " + oeuvreCreator;
+    // console.log ( "l oeuvre: "+ pOeuvre.title + " créé est un "+ oeuvreType +"  en "+ pOeuvre.year+" par "  )
+};
+displayItemDetails(data.books[1]);
+console.log(displayItemDetails(data.movies[0]));
+console.log(displayItemDetails(data.albums[0]));
+console.log(displayItemDetails(data.books[0]));
 // 2. La fonction doit afficher un message personnalisé selon le type d'objet.
 //    Exemples :
 //     - "Livre : The Hobbit par J.R.R. Tolkien (1937)"
@@ -101,3 +120,10 @@ console.log("-");
 //
 // 1. Parcourez tous les tableaux de "data" avec des boucles forEach.
 // 2. Appelez "displayItemDetails" pour chaque élément rencontré
+for (const pOeuvretype in data) {
+    const oeuvreType = data[pOeuvretype];
+    console.log(pOeuvretype, " : ");
+    oeuvreType.forEach(pOeuvre => {
+        console.log(displayItemDetails(pOeuvre));
+    });
+}

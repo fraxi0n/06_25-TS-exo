@@ -194,3 +194,14 @@ console.log("-")
 //
 // 1. Parcourez tous les tableaux de "data" avec des boucles forEach.
 // 2. Appelez "displayItemDetails" pour chaque élément rencontré
+
+
+for (const pOeuvretype in data ) 
+{
+    const oeuvreType  = data[pOeuvretype as keyof MediaData]
+
+    console.log(  pOeuvretype , " : " )
+    oeuvreType.forEach( pOeuvre => {
+        console.log(  displayItemDetails(pOeuvre) )
+    });
+}
