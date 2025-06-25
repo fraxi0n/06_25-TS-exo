@@ -1,48 +1,45 @@
-export {};
-
 // ========================================================================
 // Données de Départ
 // ========================================================================
-
 const data = {
-  books: [
-    {
-      title: "The Hobbit",
-      author: "J.R.R. Tolkien",
-      year: 1937,
-    },
-    {
-      title: "1984",
-      author: "George Orwell",
-      year: 1949,
-    },
-  ],
-  movies: [
-    {
-      title: "Inception",
-      director: "Christopher Nolan",
-      year: 2010,
-    },
-    {
-      title: "Parasite",
-      director: "Bong Joon-ho",
-      year: 2019,
-    },
-  ],
-  albums: [
-    {
-      title: "Thriller",
-      artist: "Michael Jackson",
-      year: 1982,
-    },
-    {
-      title: "Back in Black",
-      artist: "AC/DC",
-      year: 1980,
-    },
-  ],
+    books: [
+        {
+            title: "The Hobbit",
+            author: "J.R.R. Tolkien",
+            year: 1937,
+        },
+        {
+            title: "1984",
+            author: "George Orwell",
+            year: 1949,
+        },
+    ],
+    movies: [
+        {
+            title: "Inception",
+            director: "Christopher Nolan",
+            year: 2010,
+        },
+        {
+            title: "Parasite",
+            director: "Bong Joon-ho",
+            year: 2019,
+        },
+    ],
+    albums: [
+        {
+            title: "Thriller",
+            artist: "Michael Jackson",
+            year: 1982,
+        },
+        {
+            title: "Back in Black",
+            artist: "AC/DC",
+            year: 1980,
+        },
+    ],
 };
-
+export {};
 // ========================================================================
 // Exercice 1 : Typage de Constantes Simples
 // ========================================================================
@@ -51,7 +48,6 @@ const data = {
 // 1. Créez une constante "appName" de type string contenant le nom de l'application.
 // 2. Créez une constante "isOnline" de type boolean indiquant si l'application est connectée.
 // 3. Créez une constante "maxItems" de type number représentant un maximum autorisé.
-
 // ========================================================================
 // Exercice 2 : Interfaces des Objets
 // ========================================================================
@@ -60,7 +56,6 @@ const data = {
 // 1. Créez une interface "Book" avec les propriétés correspondantes.
 // 2. Créez une interface "Movie" avec les propriétés correspondantes.
 // 3. Créez une interface "Album" avec les propriétés correspondantes.
-
 // ========================================================================
 // Exercice 3 : Interface de l’Objet Global
 // ========================================================================
@@ -72,7 +67,6 @@ const data = {
 //    - albums : tableau de Album
 // 2. Typez la constante `data` contenant les données (plus haut dans le fichier)
 //    avec l’interface MediaData.
-
 // ========================================================================
 // Exercice 4 : Fonction d’Affichage Contextuel
 // ========================================================================
@@ -85,7 +79,6 @@ const data = {
 //     - "Livre : The Hobbit par J.R.R. Tolkien (1937)"
 //     - "Film : Inception réalisé par Christopher Nolan (2010)"
 //     - "Album : Thriller par Michael Jackson (1982)"
-
 // ========================================================================
 // Exercice 5 : Boucle sur Tous les Éléments
 // ========================================================================
