@@ -131,8 +131,53 @@ console.log("-")
 // ========================================================================
 // Objectif : Créez une fonction qui adapte son message selon le type d’objet.
 //
+
+
 // 1. Créez une fonction "displayItemDetails" qui accepte un objet de type
 //    Book, Movie ou Album (vous pouvez utiliser un type union).
+
+
+const displayItemDetails = ( pOeuvre : Movie | Book | Album) => {
+
+
+   let oeuvreType  =""
+   let oeuvreCreator  =""
+
+
+   if ('author' in pOeuvre)
+   {
+    oeuvreType = "livre écrit"
+    oeuvreCreator = "l'auteur "+pOeuvre.author
+   }
+   else if ('director' in pOeuvre)
+   {
+        oeuvreType = "film réalisé"
+    oeuvreCreator = "l'auteur "+pOeuvre.director
+
+   }
+   else if ('artist' in pOeuvre)
+   {
+    oeuvreType = "album composé"
+    oeuvreCreator = "l'artiste "+pOeuvre.artist
+   }
+   else {
+    alert('wtf error de propriété d objet')
+    console.error( 'wtf error de propriété d objet');
+   }
+
+   return  "l'oeuvre: "+ pOeuvre.title + " est un "+ oeuvreType +" en "+ pOeuvre.year+" par "+oeuvreCreator
+
+    // console.log ( "l oeuvre: "+ pOeuvre.title + " créé est un "+ oeuvreType +"  en "+ pOeuvre.year+" par "  )
+ } 
+
+ displayItemDetails(data.books[1])
+
+ console.log( displayItemDetails(data.movies[0]) )
+ console.log( displayItemDetails(data.albums[0]) )
+ console.log( displayItemDetails(data.books[0]) )
+
+
+
 // 2. La fonction doit afficher un message personnalisé selon le type d'objet.
 //    Exemples :
 //     - "Livre : The Hobbit par J.R.R. Tolkien (1937)"
