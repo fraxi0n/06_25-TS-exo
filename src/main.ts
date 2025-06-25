@@ -4,6 +4,7 @@
 // Données de Départ
 // ========================================================================
 
+//youpi
 const data = {
   books: [
     {
@@ -75,11 +76,31 @@ console.log("-")
 
 // ========================================================================
 // Objectif : Décrire le type de chaque catégorie de produit.
+
+//transfert dans type.ts soon 
+
+
 //
 // 1. Créez une interface "Book" avec les propriétés correspondantes.
-// 2. Créez une interface "Movie" avec les propriétés correspondantes.
-// 3. Créez une interface "Album" avec les propriétés correspondantes.
 
+interface Book  {
+    title: "string",
+    author:"string",
+    year:number 
+}
+// 2. Créez une interface "Movie" avec les propriétés correspondantes.
+interface Movie  {
+    title: "string",
+    director:"string",
+    year:number 
+}
+
+// 3. Créez une interface "Album" avec les propriétés correspondantes.
+interface Album  {
+    title: "string",
+    artist:"string",
+    year:number 
+}
 // ========================================================================
 // Exercice 3 : Interface de l’Objet Global
 console.log("Exercice 3 : ")
