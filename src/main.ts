@@ -5,7 +5,7 @@
 // ========================================================================
 
 //youpi
-const data = {
+const data : MediaData = {
   books: [
     {
       title: "The Hobbit",
@@ -84,21 +84,21 @@ console.log("-")
 // 1. Créez une interface "Book" avec les propriétés correspondantes.
 
 interface Book  {
-    title: "string",
-    author:"string",
+    title: string,
+    author:string,
     year:number 
 }
 // 2. Créez une interface "Movie" avec les propriétés correspondantes.
 interface Movie  {
-    title: "string",
-    director:"string",
+    title: string,
+    director:string,
     year:number 
 }
 
 // 3. Créez une interface "Album" avec les propriétés correspondantes.
 interface Album  {
-    title: "string",
-    artist:"string",
+    title: string,
+    artist:string,
     year:number 
 }
 // ========================================================================
@@ -108,6 +108,13 @@ console.log("-")
 
 // ========================================================================
 // Objectif : Utilisez les interfaces précédentes pour typer l’objet "data".
+
+ interface MediaData {
+    books : Book[],
+    movies: Movie[],
+    albums: Album[]
+ }
+
 //
 // 1. Créez une interface "MediaData" avec trois propriétés :
 //    - books : tableau de Book
