@@ -1,4 +1,4 @@
-// export {};
+import { Album, Book, MediaData, Movie ,  } from "./type";
 
 // ========================================================================
 // Données de Départ
@@ -69,59 +69,6 @@ const maxItems = 42
 
 console.log( appName , isOnline , maxItems )
 
-// ========================================================================
-// Exercice 2 : Interfaces des Objets
-console.log("Exercice 2 : ")
-console.log("-")
-
-// ========================================================================
-// Objectif : Décrire le type de chaque catégorie de produit.
-
-//transfert dans type.ts soon 
-
-
-//
-// 1. Créez une interface "Book" avec les propriétés correspondantes.
-
-interface Book  {
-    title: string,
-    author:string,
-    year:number 
-}
-// 2. Créez une interface "Movie" avec les propriétés correspondantes.
-interface Movie  {
-    title: string,
-    director:string,
-    year:number 
-}
-
-// 3. Créez une interface "Album" avec les propriétés correspondantes.
-interface Album  {
-    title: string,
-    artist:string,
-    year:number 
-}
-// ========================================================================
-// Exercice 3 : Interface de l’Objet Global
-console.log("Exercice 3 : ")
-console.log("-")
-
-// ========================================================================
-// Objectif : Utilisez les interfaces précédentes pour typer l’objet "data".
-
- interface MediaData {
-    books : Book[],
-    movies: Movie[],
-    albums: Album[]
- }
-
-//
-// 1. Créez une interface "MediaData" avec trois propriétés :
-//    - books : tableau de Book
-//    - movies : tableau de Movie
-//    - albums : tableau de Album
-// 2. Typez la constante `data` contenant les données (plus haut dans le fichier)
-//    avec l’interface MediaData.
 
 // ========================================================================
 // Exercice 4 : Fonction d’Affichage Contextuel
